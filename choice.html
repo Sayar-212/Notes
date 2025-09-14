@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Learning Path - Sayar Notes</title>
+    <link rel="stylesheet" href="choice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
+</head>
+<body>
+
+    
+    <div class="container">
+        <div class="choice-section">
+            <h1 class="page-title">Choose Your Learning Experience</h1>
+            <p class="subtitle">Select the format that best suits your learning style</p>
+            
+            <div class="choices">
+                <div class="choice-card" onclick="selectChoice('notes')">
+                    <div class="choice-icon">📖</div>
+                    <h2>Study Notes</h2>
+                    <p>Comprehensive written materials, summaries, and key concepts organized for efficient learning.</p>
+                    <ul class="features">
+                        <li>Structured content organization</li>
+                        <li>Key concept highlights</li>
+                        <li>Practice questions included</li>
+                        <li>Downloadable PDF format</li>
+                    </ul>
+                </div>
+                
+                <div class="choice-card" onclick="selectChoice('lectures')">
+                    <div class="premium-badge">Popular</div>
+                    <div class="choice-icon">🎯</div>
+                    <h2>Live Lecture Notes</h2>
+                    <p>Detailed notes from live teaching sessions with real-time explanations and examples.</p>
+                    <ul class="features">
+                        <li>Real-time session notes</li>
+                        <li>Interactive examples</li>
+                        <li>Q&A session summaries</li>
+                        <li>Regular updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="choice.js"></script>
+</body>
+</html>

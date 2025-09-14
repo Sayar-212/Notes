@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Sayar Notes</title>
+    <link rel="stylesheet" href="payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="payment-section">
+            <h1 class="payment-title">Complete Purchase</h1>
+            <div class="selected-plan" id="selectedPlan"></div>
+            <div class="price">₹999</div>
+            <div class="price-details">One-time payment • Lifetime access</div>
+            
+            <div class="access-token-section">
+                <div class="token-toggle" onclick="toggleTokenSection()">Got an access token? Click here</div>
+                <div class="token-input-container" id="tokenContainer" style="display: none;">
+                    <input type="text" id="accessToken" placeholder="Enter your access token" class="token-input">
+                    <button onclick="validateToken()" class="token-btn">Validate Token</button>
+                </div>
+            </div>
+            
+            <button onclick="processPayment()">Proceed to Payment</button>
+            <div class="security-note">🔒 Secure payment powered by industry-standard encryption</div>
+        </div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>

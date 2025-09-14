@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sayar Notes</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-section">
+            <h1 class="dashboard-title">My Courses</h1>
+            <div class="courses-grid">
+                <div class="course-card" onclick="openCourse('algebra')">
+                    <h3>Linear Algebra</h3>
+                    <p>Matrices, Vectors & Systems</p>
+                </div>
+                <div class="course-card" onclick="openCourse('calculus')">
+                    <h3>Differential Calculus</h3>
+                    <p>Limits, Derivatives & Applications</p>
+                </div>
+                <div class="course-card" onclick="openCourse('trigonometry')">
+                    <h3>Trigonometric Ratios</h3>
+                    <p>Sin, Cos, Tan & Identities</p>
+                </div>
+                <div class="course-card" onclick="openCourse('geometry')">
+                    <h3>Coordinate Geometry</h3>
+                    <p>Lines, Circles & Parabolas</p>
+                </div>
+                <div class="course-card" onclick="openCourse('statistics')">
+                    <h3>Statistics & Probability</h3>
+                    <p>Data Analysis & Distributions</p>
+                </div>
+                <div class="course-card" onclick="openCourse('physics')">
+                    <h3>Mechanics</h3>
+                    <p>Motion, Forces & Energy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
