@@ -9,32 +9,67 @@
 </head>
 <body>
     <div class="container">
+        <div class="dashboard-header">
+            <h1 class="main-title">Learning Dashboard</h1>
+            <p class="subtitle">Master mathematics and physics with structured learning</p>
+        </div>
+        
         <div class="dashboard-section">
-            <h1 class="dashboard-title">My Courses</h1>
+            <div class="section-header">
+                <h2 class="section-title">My Courses</h2>
+                <span class="section-badge">6 Subjects</span>
+            </div>
             <div class="courses-grid">
                 <div class="course-card" onclick="openCourse('algebra')">
+                    <div class="card-icon">📐</div>
                     <h3>Linear Algebra</h3>
                     <p>Matrices, Vectors & Systems</p>
                 </div>
                 <div class="course-card" onclick="openCourse('calculus')">
+                    <div class="card-icon">∫</div>
                     <h3>Differential Calculus</h3>
                     <p>Limits, Derivatives & Applications</p>
                 </div>
                 <div class="course-card" onclick="openCourse('trigonometry')">
+                    <div class="card-icon">📊</div>
                     <h3>Trigonometric Ratios</h3>
                     <p>Sin, Cos, Tan & Identities</p>
                 </div>
                 <div class="course-card" onclick="openCourse('geometry')">
+                    <div class="card-icon">📏</div>
                     <h3>Coordinate Geometry</h3>
                     <p>Lines, Circles & Parabolas</p>
                 </div>
                 <div class="course-card" onclick="openCourse('statistics')">
+                    <div class="card-icon">📈</div>
                     <h3>Statistics & Probability</h3>
                     <p>Data Analysis & Distributions</p>
                 </div>
                 <div class="course-card" onclick="openCourse('physics')">
+                    <div class="card-icon">⚡</div>
                     <h3>Mechanics</h3>
                     <p>Motion, Forces & Energy</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h2 class="section-title">Practice Sets</h2>
+                <span class="section-badge practice-badge">New</span>
+            </div>
+            <div class="practice-grid">
+                <div class="practice-card featured" onclick="openPractice('set1')">
+                    <div class="practice-header">
+                        <div class="practice-icon">🎯</div>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+                    <h3>Practice Set 1</h3>
+                    <p>Mixed problems from algebra and calculus</p>
+                    <div class="practice-stats">
+                        <span class="stat">25 Problems</span>
+                        <span class="stat">45 min</span>
+                    </div>
                 </div>
             </div>
         </div>

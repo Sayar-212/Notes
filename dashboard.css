@@ -34,38 +34,102 @@ body::before {
     z-index: 2;
 }
 
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    background: linear-gradient(135deg, #fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 300;
+}
+
 .dashboard-section {
     background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(15, 15, 15, 0.95));
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 16px;
     border: 1px solid #333;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
 }
 
-.dashboard-title {
-    font-size: 2.5rem;
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
     color: #ffffff;
-    margin-bottom: 3rem;
-    font-weight: 300;
-    text-align: center;
-    opacity: 0.95;
+    font-weight: 400;
+    margin: 0;
+}
+
+.section-badge {
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.practice-badge {
+    background: linear-gradient(135deg, #38a169, #2f855a);
 }
 
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
 }
 
 .course-card {
     background: linear-gradient(145deg, rgba(42, 42, 42, 0.5), rgba(26, 26, 26, 0.5));
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 12px;
     border: 1px solid #444;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    transition: left 0.5s;
+}
+
+.course-card:hover::before {
+    left: 100%;
 }
 
 .course-card:hover {
@@ -74,17 +138,91 @@ body::before {
     border-color: #666;
 }
 
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
 .course-card h3 {
     color: #ffffff;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
     font-weight: 500;
 }
 
 .course-card p {
     color: #ccc;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 300;
+}
+
+.practice-card {
+    background: linear-gradient(145deg, rgba(56, 161, 105, 0.1), rgba(47, 133, 90, 0.1));
+    border: 1px solid rgba(56, 161, 105, 0.3);
+    padding: 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.practice-card.featured {
+    background: linear-gradient(145deg, rgba(56, 161, 105, 0.15), rgba(47, 133, 90, 0.15));
+    border: 2px solid rgba(56, 161, 105, 0.4);
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(56, 161, 105, 0.2);
+    border-color: rgba(56, 161, 105, 0.6);
+}
+
+.practice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.practice-icon {
+    font-size: 2rem;
+}
+
+.difficulty-badge {
+    background: rgba(56, 161, 105, 0.2);
+    color: #68d391;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.practice-card h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.practice-card p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.practice-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .dropdown-card {
@@ -133,19 +271,31 @@ body::before {
 
 @media (max-width: 768px) {
     .dashboard-section {
-        padding: 2rem;
-    }
-    
-    .dashboard-title {
-        font-size: 2rem;
-    }
-    
-    .courses-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .course-card {
         padding: 1.5rem;
+    }
+    
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .courses-grid,
+    .practice-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .course-card,
+    .practice-card {
+        padding: 1.5rem;
+    }
+    
+    .practice-stats {
+        justify-content: center;
     }
 }
